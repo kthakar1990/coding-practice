@@ -35,10 +35,8 @@ function numberOfWays(arr, k) {
     let count = 0;
     for (let j = 0; j < arr.length; j++) {
         if (map.get(k - arr[j])) {
-            console.log(k - arr[j], map.get(k - arr[j]));
             count += map.get(k - arr[j]);
         }
-        console.log(count)
         if (k - arr[j] == arr[j]) {
             count--;
         }
