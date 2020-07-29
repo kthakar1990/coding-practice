@@ -24,27 +24,22 @@ function areTheyEqual(array_a, array_b) {
     }
 
     let output = true;
-    let mapB = new Map();
     for (let i = 0; i < array_b.length; i++) {
         if (!mapA.has(array_b[i])) {
             output = false;
         } else {
-            if (!mapB.has(array_b[i])) {
-                mapB.set(array_b[i], 0);
+            mapA.set(array_b[i], mapA.get(array_b[i]) - 1);
+            if (mapA.get(array_b[i]) === 0) {
+                mapA.delete(array_b[i]);
             }
-            mapB.set(array_b[i], mapB.get(array_b[i]) + 1);
         }
     }
 
-    mapA.forEach(logMapEl);
-
-    function logMapEl(value, key) {
-        if (mapA.get(key) !== mapB.get(key)) {
-            output = false;
-        }
+    if (mapA.size !== 0) {
+        output = false;
     }
 
     return output ? true : false;
 }
 
-console.log(areTheyEqual([1, 2, 3], [2, 3, 1]));
+console.log(areTheyEqual([1, 2, 3], [2, 3, 4]));
