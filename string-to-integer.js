@@ -48,13 +48,11 @@ function myAtoi(str) {
     if (arr[0] === '-') {
         var str = processStr(strTrim);
         var result = 0 - parseInt(str);
-        console.log(MIN_INT <= result);
         if (MIN_INT <= result) {
             return result;
         } else {
             return MIN_INT;
         }
-
     } else {
         var str = processStr(strTrim);
         var result = parseInt(str);
@@ -79,3 +77,5 @@ function processStr(str) {
     }
 
 }
+
+// console.log(myAtoi("4193909 with words 909"));

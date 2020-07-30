@@ -42,4 +42,4 @@ function areTheyEqual(array_a, array_b) {
     return output ? true : false;
 }
 
-console.log(areTheyEqual([1, 2, 3], [2, 3, 4]));
+// console.log(areTheyEqual([1, 2, 3], [2, 3, 4]));
