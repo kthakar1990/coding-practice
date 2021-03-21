@@ -24,6 +24,6 @@ let response = await requestPromise(options);
 return response.body;
 ```
 
-above example is for post request but it can easily be used for get request as well.
+above example is for post request but it can easily be used for get request as well. This way the code looks much cleaner and you can avoid the callback hell if you need to make multiple calls.
 
 Hope this helps!
