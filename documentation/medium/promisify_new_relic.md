@@ -1,3 +1,4 @@
+![New Relic Example](./new_relic_example.jpg)
 ## How to use Node Promisify with New Relic Synthetic monitors
 Recently I came across a requirement where I had to use $http call on New Relic (NR) synthetic monitors and it uses node's request library to make the rest http calls.
 
